@@ -15,14 +15,6 @@ def prob_func():
     mia_wins = 0
     final_res = 0
 
-    #g1 = bos
-    #g2 = bos
-    #g3 = mia
-    #g4 = mia
-    #g5 = bos
-    #g6 = mia
-    #g7 = bos
-
     for i in range(N):
         game1 = np.random.binomial(1, away_win) 
         game2 = np.random.binomial(1, away_win)
@@ -34,12 +26,13 @@ def prob_func():
         
         if(game1 + game2 + game3 == 3): #if mia goes up 3-0
             mia_wins += 1
+            
+            if(game4 + game5 + game6 == 0):  #if MIA loses next 3
+                if(game7 == 1):              #if MIA wins game 7
+                    final_res += 1           
 
-            if(game4 + game5 + game6 == 0): #if MIA wins 4-3, GIVEN that they went 3-0
-                if(game7 == 1):
-                    final_res += 1
-
-    print(f"For N = {N}, the simulated value for part (e) is {final_res / mia_wins}")
+    #final_res is MIA wins 4-3, GIVEN that they went 3-0
+    print(f"For N = {N}, the simulated value for part (e) is {final_res / mia_wins}") 
 
 if __name__ == "__main__":
     main()
