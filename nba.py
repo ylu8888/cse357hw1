@@ -56,7 +56,7 @@ def prob_func():
     print(f"For N = {N}, the simulated value for part (e) is {comeback_wins / N}")
 
     #0.25 * 0.25 * 0.75 * 0.25 * 0.75 * 0.25 * 0.25 = 0.00055
-    print(f"The probability MIA wins 4-3, given they were up 3-0 is {final_res / N}") 
+    #print(f"The probability MIA wins 4-3, given they were up 3-0 is {final_res / N}") 
 
 
 if __name__ == "__main__":
