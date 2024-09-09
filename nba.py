@@ -9,7 +9,7 @@ def main():
     prob_func()
 
 def prob_func():
-    N = 10000
+    N = 10000000
     home_win = 0.75
     away_win = 0.25
     mia_wins = 0
